@@ -9,6 +9,7 @@
   --btn-color-filter-activ: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   --font-size-normal: 14px;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -191,13 +192,37 @@ address {
   color: var(--accent-color);
 }
 
+.icon-mail {
+  fill: currentColor;
+}
+.icon-smartphone {
+  fill: currentColor;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* HERO */
+
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero {
+  background-color: var(--tertiary-background-color);
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-
-  background: var(--tertiary-background-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/\ hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-title {
   width: 696px;
@@ -262,6 +287,16 @@ address {
   color: var(--secondary-color-text);
 }
 
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background: var(--secondary-background-color);
+}
 /* чим займаються ----------------------*/
 .section {
   padding-top: 94px;
@@ -293,7 +328,7 @@ address {
 }
 
 .section-team-list {
-  background-color: #ffffff;
+  background-color: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -317,10 +352,78 @@ address {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 
   color: var(--secondary-color-text);
 }
+/* ICON SOCIALS-----------------------------*/
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  color: var(--icon-color);
+
+  background-color: var(--primary-background-color);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-background-color);
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+/* -------------------------постійні клеєнти----------- */
+.cliens-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.cliens-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cliens-item {
+  width: 170px;
+  height: 92px;
+}
+
+.cliens-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: var(--icon-color);
+}
+
+.cliens-link:hover,
+.cliens-link:focus {
+  border-color: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
 /* footer -------------------------------*/
+.footer-container {
+  display: flex;
+}
 
 .footer {
   padding-top: 60px;
@@ -342,18 +445,80 @@ address {
 
   color: var(--primary-background-color);
 }
+
+.footer-nav:hover,
+.footer-nav:focus {
+  color: var(--accent-color);
+}
+
 .footer-contact {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
+
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--accent-color);
 }
+
 .style-link:not(:last-child) {
   margin-bottom: 9px;
+}
+
+/* social-icon footer----------------------------------- */
+.container-footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.socials-footer-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.socials-footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  fill: #ffffff;
+}
+.socials-footer-link:hover,
+.socials-footer-link:focus {
+  background-color: var(--accent-color);
+}
+
+.socials-text {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-background-color);
+}
+.wrapper-address {
+  min-width: 231px;
+  margin-right: 93px;
 }
 
 /*------------ портфоліо -----------------------------*/
@@ -385,12 +550,14 @@ address {
 .filter-btn:focus {
   background: var(--accent-color);
   color: var(--tertiary-color-text);
+  box-shadow: var(--btn-color-filter-activ);
 }
 .filter-btn.activ {
   background: var(--accent-color);
   color: var(--primary-background-color);
   box-shadow: var(--btn-color-filter-activ);
 }
+
 /*картки */
 
 .card-set {
@@ -404,6 +571,14 @@ address {
   background-color: #ffffff;
   border: 1px solid #eeeeee;
 }
+
+.item-card:hover,
+.item-card:focus {
+  background: var(--primary-background-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .filter-title {
   font-size: 18px;
   line-height: 2;
